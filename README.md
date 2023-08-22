@@ -1,13 +1,14 @@
 # WhisperAPI Flask Server
 
-This transcription service uses OpenAI's Whisper API to transcribe audio files to text. It supports several audio formats, splits large files into smaller parts, and generates a webpage where users can upload their audio files and download transcribed, formatted text files with subtitles. 
+This transcription service uses OpenAI's Whisper API to transcribe or translate audio files to text. It supports several audio formats, splits large files into smaller parts, and generates a webpage where users can upload their audio files and download transcribed, formatted text files with subtitles. 
 
 ## Features
 
-- Transcription of audio files using OpenAI's Whisper API
+- Transcription/Translation of audio files using OpenAI's Whisper API
 - Support for multiple audio formats: .mp3, .mp4, .mpeg, .mpga, .m4a, .wav, .webm
 - Handles large files by splitting them into smaller parts
-- Formatted SRT subtitling
+- Formatted SRT subtitling (Optional)
+- Language Input for Transcription
 - Flask-based web interface for uploading and downloading files
 - Memory conscious through automatic cleanup of temporary directories
 
@@ -20,11 +21,11 @@ This transcription service uses OpenAI's Whisper API to transcribe audio files t
 - 
 ## Overview
 
-The transcription service consists of three main parts:
+The transcription/translation service consists of three main parts:
 
 1. `processing.py`: Core functionality for transcribing audio files, splitting large files, and parsing/formatting transcripts.
 2. `main.py`: A script that uses the functions from `processing.py` to transcribe files in a directory and save the transcripts.
-3. `app.py`: A Flask web application that provides a user interface for uploading and downloading files, and calls the transcription functions from `processing.py`.
+3. `server.py`: A Flask web application that provides a user interface for uploading and downloading files, and calls the transcription functions from `processing.py`.
    
 ## Usage
 
