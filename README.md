@@ -18,7 +18,7 @@ This transcription service uses OpenAI's Whisper API to transcribe or translate 
 - Pydub
 - OpenAI Python package
 - Flask
-- 
+  
 ## Overview
 
 The transcription/translation service consists of three main parts:
